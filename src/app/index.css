@@ -1,0 +1,37 @@
+
+body{
+   background-color: #040D26;
+    height: 100vh;
+}
+.nav{
+  display: inline;
+   width: 100%;
+  padding: 14px 6px;
+  font-size: 14px;
+  /* text-transform: capitalize; */
+ 
+  /* font-weight: bold; */
+  color: #ffff;
+}
+.wallet{
+    background: url('../../public/images/simple/arrow-bg.png');
+    /* height: 400px; */
+}
+
+
+.nav:hover{
+ text-decoration:underline ;
+ text-underline-offset: 6px;
+ /* padding: 45px 0px; */
+ /* text-decoration-line: underline; */
+}
+/* @keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-slide {
+  display: flex;
+  width: max-content;
+  animation: slide 18s linear infinite;
+} */
