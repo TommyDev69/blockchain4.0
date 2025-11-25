@@ -1,4 +1,5 @@
 import MainExchange from "./exchange/MainExchange";
+import FaqPage from "./faq/FaqPage";
 import "./index.css";
 import MainHead from "./main header/MainHead";
 import MenuNav from "./navbar/MenuNav";
@@ -19,6 +20,7 @@ export default function Home() {
        <TableProcess />
        <Wallet />
        <Trade />
+       <FaqPage />
      </div>
      <div className="hidden  w-[40%] bg-red-600">
        <MenuNav />
