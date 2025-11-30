@@ -6,11 +6,11 @@ export default function NavContent() {
         <ul className='list-none flex justify-center w-full upperxcase capitalize'>
             <div className='py-4'>
 
-            <li className='font-bold  nav'>home</li>
-            <li  className='nav'>Exchange</li>
-            <li  className='nav'>Eeatures</li>
-            <li  className='nav'>FAQ</li>
-            <li  className='nav'>Contact us</li>
+            <a href='#home'><li className='font-bold nav'>home</li></a>
+            <a href='#exchange'><li  className='nav'>Exchange</li></a>
+            <a href='#wallet'><li  className='nav'>Wallet</li></a>
+            <a href='#faq'><li  className='nav'>FAQ</li></a>
+            <a href='#contact'><li  className='nav'>Contact us</li></a>
             </div>
             
 

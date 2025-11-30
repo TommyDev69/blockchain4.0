@@ -1,6 +1,9 @@
 import React from 'react'
 import Image from "next/image";
 import Brand from "../../../public/images/logo/logo.svg"
+
+import Link from "next/link";
+// import MainExchange from '../exchange/MainExchange';
 // //  interface dropping{
 // //     Tog:boolean;
 // //     Show: ()=>void;
@@ -15,11 +18,11 @@ export default function MenuNav() {
         <div className='py-4 text-[12px] text-[#ffffff] capitalize px-3'>
             <ul className='list-none py-4'>
 
-                    <li className=' li font-bold py-4 bg-fuchwsia-400'>home</li>
-                    <li  className=' li py-4 bg-wamber-700'>Exchange</li>
-                    <li  className=' li py-4 bg-gwreen-700'>features</li>
-                    <li  className=' li py-4 bg-ywellow-500'>FAQ</li>
-                    <li  className=' li py-4 bg-gwray-700'>Contact us</li>
+                   <a href='#home'> <li className=' li font-bold py-4 bg-fuchwsia-400'>home</li></a>
+                   <a href='#exchange'><li  className=' li py-4 bg-wamber-700'>Exchange</li></a>
+                   <a href='#features'><li  className=' li py-4 bg-gwreen-700'>features</li></a>
+                   <a href='#faq'> <li  className=' li py-4 bg-ywellow-500'>FAQ</li></a>
+                   <a href='#contact'><li  className=' li py-4 bg-gwray-700'>Contact us</li></a>
             </ul>
         </div>
 

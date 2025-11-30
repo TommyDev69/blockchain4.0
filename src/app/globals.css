@@ -11,7 +11,8 @@ body{
   /* background: linear-gradient(90deg, rgba(189, 36, 223, 0.1),rgba(45, 106, 222, 0.1) 97.15%); */
   height: 100vh;
   /* background: linear-gradient(90deg, rgba(189, 36, 223, 0.5), rgba(45, 106, 222, 0.5) 97.15%); */
-
- 
   
+}
+html {
+  scroll-behavior: smooth;
 }

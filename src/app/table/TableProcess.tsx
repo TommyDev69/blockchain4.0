@@ -80,10 +80,13 @@ const TableProcess = () => {
 // const result = tableData.slice(0, 4);
 
     return ( 
-     <div className=' py-12 border-[0.5] md:border-0 border-t-[#ccc] bxg-[#0c1b44] bg-[linear-gradient(45deg,rgba(189,36,223,0.2),rgba(45,106,222,0.2)_120.126%)] bg-blend-multiply'>
+     <div className=' py-12 border-[0.5] md:border-0 border-t-[#ccc]  bg-[linear-gradient(45deg,rgba(189,36,223,0.2),rgba(45,106,222,0.2)_120.126%)] bg-blend-multiply'>
             {loading ? <p className="text-white">Loading...</p> :<TableContent renderResult ={formatted}  viewMore = {visible} setViewMore = {() =>  setVisible(visible + 10)} />}
-            <Image src={ellpse} alt='ellpse'  />  
-            <Features featureResult = {features} />
+            <Image src={ellpse} alt='ellpse'  /> 
+            
+
+               <Features featureResult = {features}  />
+          
         </div>
      );
 }
