@@ -22,7 +22,7 @@ export default function Question({ Question, disk, Faq}:FAQ) {
         
         return(
 
-        <div  className="mb-4 md:w-5/12  px-10 py-14 opacity-85 z-[-1]  bg-[#0c1b44] flex flex-col md:justify-center border-[#0c1b44] rounded-3xl" key={Display.id}>
+        <div  className="mb-4 md:w-5/12  px-10 py-14 opacity-65   bg-[#0c1b44] flex flex-col md:justify-center border-[#0c1b44] rounded-3xl" key={Display.id}>
             <div onClick={() =>Faq(Display.id)} className="flex items-center justify-between cursor-pointer">
                 <div className="flex items-center font-bold">
                     <p className="capitalize md:text-[18px] text-[#a8a3a3]  ">{Display.id}.</p>

@@ -51,9 +51,13 @@ export default function TableContent({ renderResult,viewMore,setViewMore}:destru
                 <td className="text-[#ffffff] px-4 pt-8 flex justvify-center items-center">{data.market_cap_rank}</td>
                 
                 <td className="boreder px-4 py-2 ">
-                  <div className="w-[90%] mx-auto md:pl-14 pl-0  flex items-center">
-                    <Image src={data.image} alt={data.name} width={10}  height={10} className='md:w-[5%] w-6 ' />
-                    <p className="text-[#ffffff]  md:text-[16px] text-[13px] capitalize">{data.name}</p>
+                  <div className="w-full md:justify-center  flex items-center bg-aember-600">
+                    {/* <div className='md:w-[20%] w-14 bge-fuchsia-500 flex justify-center  ' > */}
+                      <Image src={data.image} alt={data.name} width={10}  height={10} className='md:w-[10%] w-8 pr-2' />
+                    {/* </div> */}
+                    <div>
+                      <p className="text-[#ffffff]  md:text-[16px] text-[14px] capitalize">{data.name}</p>
+                    </div>
                   </div>
                 </td>
                 

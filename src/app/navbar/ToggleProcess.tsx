@@ -6,7 +6,7 @@ const ToggleProcess = () => {
   const [toggle, setToggle] = useState(false);
 
   const show = () => {
-    setToggle(!toggle); // toggle open/close
+    setToggle(!toggle);
   };
 
   return (
@@ -14,22 +14,18 @@ const ToggleProcess = () => {
       {/* Hamburger Menu Icon */}
       <MenuIcon Tog={toggle} Show={show} />
 
-      {/* Sidebar Menu */}
-      {toggle && (
-         <div className="fixed inset-0 z-50 flex">
+      {/* Overlay + Sidebar (always mounted for animation) */}
+      <div className={`fixed inset-0 z-50 ${toggle ? "pointer-events-auto" : "pointer-events-none"}`}>
+        
+        {/* Background Overlay */}
+        <div
+          className={`absolute inset-0 bg-black/70 transition-opacity duration-300 ${toggle ? "opacity-100" : "opacity-0"}`}onClick={show}></div>
 
-          {/* Transparent dark background */}
-          <div
-            className="absolute inset-0 bg-black/70 "
-            onClick={show} // clicking outside closes menu
-          ></div>
-
-          {/* Sidebar Menu (slides from right) */}
-          <div className="relative ml-auto w-[50%] h-full bg-white shadow-xl z-50">
-            <MenuNav />
-          </div>
-
-        </div>)}
+        {/* Sidebar Menu */}
+        <div className={` absolute right-0 top-0 h-full w-[50%] bg-white shadow-xl transition-transform duration-500 ease-in-out ${toggle ? "translate-x-0" : "translate-x-full"}`}>
+          <MenuNav />
+        </div>
+      </div>
     </div>
   );
 };

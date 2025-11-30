@@ -19,8 +19,8 @@ import Features from './Features'
 import { useEffect, useState } from 'react'
 
 // import ellpse from '../../../public/images/table/ellpse.png'
+const api = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc";
 const TableProcess = () => {
-    const api = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc";
     const [crypto, setCrypto] = useState<any[]>([]);
     // view more on table
     const [visible, setVisible] = useState(10)

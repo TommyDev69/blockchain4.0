@@ -1,6 +1,5 @@
 "use client"
 import BrandLog from "./BrandLog";
-import MenuIcon from "./MenuIcon";
 // import MenuNav from "./MenuNav";
 import NavContent from "./NavContent";
 import NavRegister from "./NavRegister";

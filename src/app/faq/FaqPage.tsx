@@ -19,7 +19,7 @@ export default function FaqPage() {
         setToggle(prev => (prev === id ? null : id))
     }
     return (
-    <div className='faq py-10'>
+    <div className='faq py-10  bg-[linear-gradient(45deg,rgba(189,36,223,0.2),rgba(45,106,222,0.1)_97.15%)] bg-blend-multiply'>
       <div className="font-bold text-[12px] pb-5">
         <p className="capitalize ">frequently asked question</p>
       </div>
