@@ -16,7 +16,7 @@ interface Output{
 }
 export default function FundDesign({Brand,Arrow,Wallet,Funding, Close}:Output) {
   return (
-    <div className='mxs-auto bg-fuchsia-950  rounded-lg md:w-4/12 flex flex-col justifyd-center items-center py-4 px-12'>
+    <div className='mxs-autoborder-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)]  rounded-lg md:w-4/12 flex flex-col  items-center py-4 px-12'>
         <div className="flex items-center w-full justify-end ">
             <div className='  rounded-lg border-2 border-[#ffff]'>
               {/* CLOSE BUTTON */}
