@@ -1,35 +1,12 @@
-// import type { NextConfig } from "next";
-
-// const nextConfig: NextConfig = {
-//   /* config options here */
-//   reactCompiler: true,
-//  images: {
-//     remotePatterns: [
-//       {
-//         protocol: "https",
-//         hostname: "coin-images.coingecko.com",
-//       },
-//     ],
-//   },
-// };
-
-// export default nextConfig;
-
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // static export
   images: {
+    unoptimized: true, // needed for next/image in static export
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "coin-images.coingecko.com",
-      },
-      {
-        protocol: "https",
-        hostname: "assets.coingecko.com",
-      }
+      { protocol: "https", hostname: "coin-images.coingecko.com" },
+      { protocol: "https", hostname: "assets.coingecko.com" },
     ],
   },
 };
 
 module.exports = nextConfig;
-
