@@ -6,51 +6,62 @@ import "./index.css";
 import MainHead from "./main header/MainHead";
 import Chat from "./mesage/Chat";
 import MenuNav from "./navbar/MenuNav";
-import SignUpProcess from "./navbar/SignUpProcess";
+// import SignUpProcess from "./navbar/SignUpProcess";
 import TableProcess from "./table/TableProcess";
 import Trade from "./trade/Trade";
 import Wallet from "./wallet/Wallet";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { BrowserRouter } from "react-router-dom";
 
 
 
 export default function Home() {
   return (
-    
+    <div>
 
-    <div className="flex">
+    <Router>
+     <Routes>
+        <Route path="" element ={
 
-      <div className="w-full flex flex-col" id="home">
-        <MainHead />
+          <div className="flex">
+
+            <div className="w-full flex flex-col" id="home">
+              <MainHead />
+                
+              <MainExchange />
+              <div id="exchange">
+                <TableProcess />
+              </div>
+              
+              <div id="wallet">
+                <Wallet />
+              </div>
+              <Trade />
+
+              <div id="faq">
+                <FaqPage />
+              </div>
+
+              <div id="contact">
+                <Chat />
+              </div>
+
+              <Footer />
+              {/* <SignUpProcess /> */}
+
+            </div>
+            <div className="hidden relative  w-[40%] bg-[#040D26]">
+            <MenuNav />
+            </div>
+            
           
-        <MainExchange />
-        {/* <div id="exchange">
-          <TableProcess />
-        </div>
-         */}
-        <div id="wallet">
-          <Wallet />
-        </div>
-        <Trade />
+          </div>
+        }>
 
-        <div id="faq">
-          <FaqPage />
-        </div>
-
-        <div id="contact">
-          <Chat />
-        </div>
-
-        <Footer />
-        {/* <SignUpProcess /> */}
-
-      </div>
-      <div className="hidden relative  w-[40%] bg-[#040D26]">
-       <MenuNav />
-      </div>
-      
-    
+        </Route>
+     </Routes>
+    </Router>
     </div>
   
 
