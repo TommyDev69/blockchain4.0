@@ -51,9 +51,9 @@ const SignUpExchange = ({HandleForm, HandleSubmit, FormData, Error, Country, Cit
     return (  
         <div className="relawtive">
 
-        <form onSubmit={HandleSubmit} className='  w-full  '>
+        <form onSubmit={HandleSubmit}>
 
-        <div className="bg-purple-950  mx-auto  md:w-full w-full flex flex-col py-4 rounded-xl px-4 items-center ">
+        <div className="border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)]    w-full flex flex-col py-4 justify-center rounded-xl px-4 items-center ">
             <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 {isOpen && (
                     <div onClick={Close} className="flex border p-2 border-white rounded-lg cursor-pointer">
