@@ -26,7 +26,7 @@ export default function ExchangeContent({Title, Result,onSelect}:tradingProps) {
       {Result.map(dataItem =>(
 
       <div 
-      className="container w-10/12 flex  mx-auto md:mx-0  flex-col  my-16  bg-[#040D26] relative rounded-lg  hover:border-fuchsia-900 hover:border-2 hover:transition-transform hover:scale-105 hover:ease-in-out hovefr:mb-5 hover:duration-300 hover:gap-4" 
+      className="container w-10/12 flex  mx-auto md:mx-0  flex-col  my-16  bg-[#0c1b44] relative rounded-lg  hover:border-fuchsia-900 hover:border-2 hover:transition-transform hover:scale-105 hover:ease-in-out hovefr:mb-5 hover:duration-300 hover:gap-4" 
       key={dataItem.id} onClick={() => onSelect && onSelect(dataItem.id)}>
         <div className="flex flex-col items-center gap-2">
            <div className=" md:bottom-[150px] bottom-[180px] w-[20%] absolute  flex items-center justify-center p-4 rounded-full  bg-[linear-gradient(45deg,rgb(189,36,223),rgb(45,106,222)_97.15%)]">
