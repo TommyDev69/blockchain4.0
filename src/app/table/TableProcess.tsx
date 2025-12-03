@@ -15,13 +15,42 @@ import FeatureThree from '../../../public/images/features/featureThree.svg'
 import TableContent from './TableContent'
 import Features from './Features'
 
+interface CoinType {
+  id: string;
+  name: string;
+  image: string;
+  market_cap_rank: number;
+  current_price: number;
+  price_change_percentage_24h: number;
+  market_cap: number;
+}
+
+interface TableRender {
+  market_cap_rank: number;
+  name: string;
+  image: string;
+  price: string;
+  price_change_percentage_24h: number | null;
+  market_cap: string;
+  action: string;
+  numb: number;
+}
+
+interface FeatureType {
+  id: number;
+  image: string;
+  topic: string;
+  content: string;
+}
+
+
 // import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 // import ellpse from '../../../public/images/table/ellpse.png'
 const linkApi = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc";
 const TableProcess = () => {
-    const [crypto, setCrypto] = useState<any[]>([]);
+    const [crypto, setCrypto] = useState<CoinType[]>([]);
     // view more on table
     const [visible, setVisible] = useState(10)
 
@@ -59,7 +88,8 @@ const TableProcess = () => {
         price: coin.current_price.toLocaleString(),
         price_change_percentage_24h: coin.price_change_percentage_24h, // number only
         market_cap: coin.market_cap.toLocaleString(),
-        action: "Buy",
+        action: "Buy"
+        //  numb: index + 1,
         }));
 
 

@@ -1,5 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
+
+// interface CoinType {
+//   id: string;
+//   name: string;
+//   image: string;
+//   market_cap_rank: number;
+//   current_price: number;
+//   price_change_percentage_24h: number;
+//   market_cap: number;
+//     numb: number; // required!
+
+// }
+
  interface tableRender{
   market_cap_rank: number,
    name: string,
@@ -8,7 +21,7 @@ import Image from 'next/image'
  price_change_percentage_24h: number | string | null;
    market_cap: string,
    action: string,
-   numb:number
+  
  }
 {/* compute safely (inside render or extract to a small helper) */}
 
