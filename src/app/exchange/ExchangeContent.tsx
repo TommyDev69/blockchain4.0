@@ -19,7 +19,7 @@ export default function ExchangeContent({Title, Result,onSelect}:tradingProps) {
     <div>
       <article className='w-full pb-6 '>
         <p className="text-[#ffffff] text-[28px] capitalize font-bold flex flex-col justify-center items-center">{Title}</p>
-        <section className='flex justify-center w-5/12 text-[14px] text-center  mx-auto items-center'>Getting started with crypto is simple. create account, verify your identity, and start buying, selling, or accepting digital currencies in just a few click-- all on a secure and intuitive platform.</section>
+        <section className='flex justify-center text-[#ccc] w-5/12 text-[14px] text-center  mx-auto items-center'>Getting started with crypto is simple. create account, verify your identity, and start buying, selling, or accepting digital currencies in just a few click-- all on a secure and intuitive platform.</section>
       </article>
       <div className="flex  flex-col md:flex-row container   w-9/12 mx-auto relative  md:gap-4">
 
