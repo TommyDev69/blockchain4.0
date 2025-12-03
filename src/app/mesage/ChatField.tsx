@@ -1,4 +1,4 @@
-import React from 'react';
+import React,  { ChangeEvent } from 'react';
 
 interface CountryType {
   country: string;
@@ -16,7 +16,7 @@ interface FormData {
 }
 
 interface Processing {
-  handleForm: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+  handleForm: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   Error: string;
   countryResult: CountryType[];

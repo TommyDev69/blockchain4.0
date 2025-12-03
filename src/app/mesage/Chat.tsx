@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, ChangeEvent  } from "react";
 import ChatField from "./ChatField";
 import Swal from "sweetalert2";
 interface CountryType {
@@ -15,7 +15,7 @@ const Chat = () => {
   const [cities, setCities] = useState<string[]>([]);
   const [selectedCountry, setSelectedCountry] = useState("");
 
-  const regX = /\S+@\S+\.\S+/;
+  const emailrRegX = /\S+@\S+\.\S+/;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -27,7 +27,7 @@ const Chat = () => {
     message: "",
   });
 
-  const handleForm = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleForm = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
 
     setFormData((prev) => ({
@@ -50,7 +50,7 @@ const Chat = () => {
     if (name === "email") {
       if (value.trim() === "") {
         setError("Email field is empty");
-      } else if (!regX.test(value)) {
+      } else if (! emailrRegX.test(value)) {
         setError("Email is not valid");
       } else {
         setError("");
@@ -58,77 +58,43 @@ const Chat = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
- if (!formData.name.trim()) {
-    Swal.fire({
-      title: 'Error',
-      text: 'Name field cannot be empty',
-      icon: 'error',
-    });
-    return;
-  }
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-   if (!formData.user.trim()) {
-    Swal.fire({
-      title: 'Error',
-      text: 'user field cannot be empty',
-      icon: 'error',
-    });
-    return;
-  }
-   if (!formData.phone.trim()) {
-    Swal.fire({
-      title: 'Error',
-      text: 'Phone Number field cannot be empty',
-      icon: 'error',
-    });
-    return;
-  }
-   if (!formData.country.trim()) {
-    Swal.fire({
-      title: 'Error',
-      text: 'Select the Country you are from',
-      icon: 'error',
-    });
-    return;
-  }
-  if (!formData.city.trim()) {
-    Swal.fire({
-      title: 'Error',
-      text: 'Select the city field cannot be empty',
-      icon: 'error',
-    });
-    return;
-  }
-  if (!formData.email.match(/\S+@\S+\.\S+/)) {
-    Swal.fire({
-      title: 'Error',
-      text: 'Invalid email format',
-      icon: 'error',
-    });
-    return;
-  }
+    const requiredFields = [
+      { key: "name", msg: "Name field cannot be empty" },
+      { key: "email", msg: "email field cannot be empty" },
+      { key: "user", msg: "Username field cannot be empty" },
+      { key: "phone", msg: "Phone number is required" },
+      { key: "country", msg: "Select your country" },
+      { key: "city", msg: "City field cannot be empty" },
+      { key: "message", msg: "Message field cannot be empty" },
+    ];
 
-   if (!formData.message.trim()) {
+    for (const field of requiredFields) {
+      if (!formData[field.key as keyof typeof formData].trim()) {
+        Swal.fire({ title: "Error", text: field.msg, icon: "error" });
+        return;
+      }
+    }
+
+    if (! emailrRegX.test(formData.email)) {
+      Swal.fire({
+        title: "Error",
+        text: "Invalid email format",
+        icon: "error",
+      });
+      return;
+    }
+
     Swal.fire({
-      title: 'Error',
-      text: 'message field cannot be empty',
-      icon: 'error',
+      title: "Success",
+      text: "Form submitted successfully!",
+      icon: "success",
     });
-    return;
-  }
 
-  
-
-  Swal.fire({
-    title: 'Success',
-    text: 'Form submitted successfully!',
-    icon: 'success',
-  });
-
-  console.log("Form submitted:", formData);
-};
+    console.log("Form submitted:", formData);
+  };
 
   useEffect(() => {
     const fetchApi = async () => {
