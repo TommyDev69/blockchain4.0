@@ -46,9 +46,9 @@ export default function SignIn({
     <div className='relative'>
       <form
         onSubmit={HandleSubmit}
-        className="absolute left-[-170px] top-[-220px]  md:left-0 md:top-[-220px]"
+        className="absolute right-[25px] top-[-220px] "
       >
-        <div className="bg-purple-950 mx-auto flex py-4 md:w-full  rounded-xl px-4 flex-col items-center">
+        <div className="bg-purple-950 mwx-auto flex py-4 md:w-full  rounded-xl px-4 flex-col items-center">
           
           <div className="flex w-full justify-end pr-2">
             {isOpen && (

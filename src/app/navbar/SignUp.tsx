@@ -49,11 +49,11 @@ interface ResultShow {
 
 const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid,  Close, isOpen}:ResultShow) => {
     return (  
-        <div className="relative w-full bg-red-600">
+        <div className="relative ">
 
-        <form onSubmit={HandleSubmit} className='absolute right-[168px] top-[-330px]  md:top-[-310px]  w-full  '>
+        <form onSubmit={HandleSubmit} className=' flex flex-col justify-center absolute right-[50px] top-[-330px]  md:top-[-310px]   '>
 
-        <div className="bg-purple-950  mx-auto  md:w-full w-full flex py-4rounded-xl px-4 flex-col items-center ">
+        <div className="bg-purple-950  mx-aduto  md:w-full  flex py-4 rounded-xl px-4 flex-col items-center ">
             <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 {isOpen && (
                     <div onClick={Close} className="flex border p-2 border-white rounded-lg cursor-pointer">

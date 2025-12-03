@@ -253,7 +253,7 @@ const SignUpProcess = ({Close, isOpen}:Props) => {
     className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 transition-opacity duration-500"
     onClick={Close} // clicking the backdrop closes modal
   >
-    <div onClick={(e) => e.stopPropagation()} className="w-full max-w-md">
+    <div onClick={(e) => e.stopPropagation()} className="w-full ">
       <SignUp
         HandleForm={handleForm}
         HandleSubmit={handleSubmit}
