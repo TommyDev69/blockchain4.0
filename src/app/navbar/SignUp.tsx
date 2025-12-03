@@ -51,7 +51,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
     return (  
         <div className="relative ">
 
-        <form onSubmit={HandleSubmit} className=' flex flex-col justify-center absolute w-10/12 md:w-full  md:right-[50px] top-[-330px]  md:top-[-310px]   '>
+        <form onSubmit={HandleSubmit} className='  absolute w-10/12 md:w-full  md:right-[50px] top-[-330px]  md:top-[-310px]   '>
 
         <div className="bg-purple-950  mx-aduto  md:w-full   flex py-4 rounded-xl px-4 flex-col items-center ">
             <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
