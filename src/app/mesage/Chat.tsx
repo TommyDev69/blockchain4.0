@@ -7,7 +7,7 @@ interface CountryType {
   country: string;
   cities: string[];
 }
-const Url = "https://countriesnow.space/api/v0.1/countries";
+const API = "https://countriesnow.space/api/v0.1/countries";
 
 const Chat = () => {
   const [error, setError] = useState("");
@@ -133,7 +133,7 @@ const Chat = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const res = await fetch(Url);
+        const res = await fetch(API);
         const data = await res.json();
         setCountryApi(data.data || []);
       } catch (error) {

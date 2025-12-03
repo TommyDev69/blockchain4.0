@@ -86,7 +86,7 @@ export default function ChatField({ cityResult,countryResult,Error,handleForm,ha
                         <label className='uppercase text-[14px] text-[#ccc]'>city</label>
                     </div>
                     <select name='city' value={formData.city} onChange={handleForm}  className="w-full border-[#ccc] border-2 px-4  rounded-lg md:text-16 py-4"  disabled={cityResult.length === 0}>
-                        <option className='text-black' >choose your country</option>
+                        <option className='text-black' >choose your city</option>
                             {cityResult.map((city, index) =>(
 
                             <option className='text-black' value={city} key={index}>{city}</option>

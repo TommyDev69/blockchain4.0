@@ -1,3 +1,4 @@
+import Fund from "./exchange/Fund";
 import MainExchange from "./exchange/MainExchange";
 import FaqPage from "./faq/FaqPage";
 import Footer from "./footer/Footer";
@@ -5,6 +6,7 @@ import "./index.css";
 import MainHead from "./main header/MainHead";
 import Chat from "./mesage/Chat";
 import MenuNav from "./navbar/MenuNav";
+import SignUpProcess from "./navbar/SignUpProcess";
 import TableProcess from "./table/TableProcess";
 import Trade from "./trade/Trade";
 import Wallet from "./wallet/Wallet";
@@ -41,13 +43,13 @@ export default function Home() {
         </div>
 
         <Footer />
-        
+        {/* <SignUpProcess /> */}
+
       </div>
-      
-      <div className="hidden  w-[40%] bg-[#040D26]">
+      <div className="hidden relative  w-[40%] bg-[#040D26]">
        <MenuNav />
       </div>
-
+      
     
     </div>
   

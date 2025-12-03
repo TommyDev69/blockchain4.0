@@ -19,7 +19,7 @@ import Features from './Features'
 import { useEffect, useState } from 'react'
 
 // import ellpse from '../../../public/images/table/ellpse.png'
-const api = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc";
+const linkApi = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc";
 const TableProcess = () => {
     const [crypto, setCrypto] = useState<any[]>([]);
     // view more on table
@@ -30,7 +30,7 @@ const TableProcess = () => {
       useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(api, {
+                const res = await fetch(linkApi, {
                     cache: "no-store",   // IMPORTANT to avoid caching
                 });
                 setLoading(true);

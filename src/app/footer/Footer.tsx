@@ -32,6 +32,10 @@ const Footer = () => {
             <FooterContent Nav={nav} title='useful links' />
             <FooterContact Contact={details} title='contact us' />
             </div>
+
+            <div className=" flex justify-center border-t-[0.5px] border-t-[#ffffff] py-4">
+                <p className='capitalize  text-[#ffffff]'>&copy; 2025 - all right reserved by LINUX</p>
+            </div>
         </div>
     )
 }
