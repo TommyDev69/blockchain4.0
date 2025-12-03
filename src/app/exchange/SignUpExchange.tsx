@@ -47,13 +47,13 @@ interface ResultShow {
 }
 
 
-const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid,  Close, isOpen}:ResultShow) => {
+const SignUpExchange = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid,  Close, isOpen}:ResultShow) => {
     return (  
-        <div className="relative">
+        <div className="relawtive">
 
-        <form onSubmit={HandleSubmit} className='absolute right-1 top-[-330px] md:left-0 md:top-[-310px]  w-full wd-10/12 '>
+        <form onSubmit={HandleSubmit} className='  w-full  '>
 
-        <div className="bg-purple-950  mx-auto  md:w-full w-full flex py-4rounded-xl px-4 flex-col items-center ">
+        <div className="bg-purple-950  mx-auto  md:w-full w-full flex flex-col py-4 rounded-xl px-4 items-center ">
             <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 {isOpen && (
                     <div onClick={Close} className="flex border p-2 border-white rounded-lg cursor-pointer">
@@ -211,4 +211,4 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
     );
 }
  
-export default SignUp;
+export default SignUpExchange;

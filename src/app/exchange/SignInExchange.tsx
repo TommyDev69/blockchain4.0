@@ -46,9 +46,9 @@ export default function SignInExchange({
     <div className='relfative'>
       <form
         onSubmit={HandleSubmit}
-        className="absodlute ldeft-[-100px] tdop-[-220px] flex flex-col justify-center  mdd:left-0 md:top-[-220px]"
+        className=" flex fleWx-col jusWtify-center  mdd:left-0 md:top-[-220px]"
       >
-        <div className="bg-purple-950 mx-auto flex py-4 md:w-full  rounded-xl px-4 flex-col items-center">
+        <div className="bg-purple-95 bg-red-600 mx-auto flex py-4 md:w-full  rounded-xl px-4 flex-col items-center">
           
           <div className="flex w-full justify-end pr-2">
             {isOpen && (

@@ -4,7 +4,7 @@ import User from '../../../public/images/work/icon-one.svg'
 import fund from '../../../public/images/work/icon-two.svg'
 import trade from '../../../public/images/work/icon-three.svg'
 import ExchangeContent from './ExchangeContent'
-import SignUpProcess from '../navbar/SignUpProcess';
+import SignUpProcessExchange from '../navbar/SignUpProcess';
 import { useState } from 'react';
 import Fund from './Fund';
 
@@ -36,8 +36,9 @@ const MainExchange = () => {
       <div >
 
           <ExchangeContent Title="how it work"  Result ={Work}  onSelect={handleCardClick} />
-          <SignUpProcess isOpen={isModalOpen} Close={() => setIsModalOpen(false)} />
+          <SignUpProcessExchange isOpen={isModalOpen} Close={() => setIsModalOpen(false)} />
           <Fund isOpen={ModalOpen} Close={() => setModalOpen(false)}  />
+           
         
       </div>
   );

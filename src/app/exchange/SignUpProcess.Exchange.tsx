@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import SignUp from "./SignUp";
+import SignUp from "./SignUpExchange";
+import SignUpExchange from "./SignUpExchange";
 
 interface CountryType {
   country: string;
@@ -38,7 +39,7 @@ interface Props {
 
 const Url = "https://countriesnow.space/api/v0.1/countries";
 
-const SignUpProcess = ({Close, isOpen}:Props) => {
+const SignUpProcessExchange = ({Close, isOpen}:Props) => {
   const [error, setError] = useState<ErrorType>({});
   const [countryApi, setCountryApi] = useState<CountryType[]>([]);
   const [city, setCity] = useState<string[]>([]);
@@ -254,7 +255,7 @@ const SignUpProcess = ({Close, isOpen}:Props) => {
     onClick={Close} // clicking the backdrop closes modal
   >
     <div onClick={(e) => e.stopPropagation()} className="w-full max-w-md">
-      <SignUp
+      <SignUpExchange
         HandleForm={handleForm}
         HandleSubmit={handleSubmit}
         FormData={form}
@@ -275,4 +276,4 @@ const SignUpProcess = ({Close, isOpen}:Props) => {
   );
 };
 
-export default SignUpProcess;
+export default SignUpProcessExchange;
