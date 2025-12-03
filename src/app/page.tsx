@@ -25,10 +25,10 @@ export default function Home() {
         <MainHead />
           
         <MainExchange />
-        <div id="exchange">
+        {/* <div id="exchange">
           <TableProcess />
         </div>
-        
+         */}
         <div id="wallet">
           <Wallet />
         </div>
