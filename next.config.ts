@@ -29,7 +29,6 @@ const nextConfig = {
       }
     ],
   },
-    output: 'export', // For fully static HTML
 };
 
 module.exports = nextConfig;

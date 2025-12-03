@@ -11,7 +11,7 @@ import TableProcess from "./table/TableProcess";
 import Trade from "./trade/Trade";
 import Wallet from "./wallet/Wallet";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { BrowserRouter } from "react-router-dom";
 
 
@@ -19,10 +19,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-
-    <Router>
-     <Routes>
-        <Route path="/home" element ={
+        
 
           <div className="flex">
 
@@ -57,11 +54,6 @@ export default function Home() {
             
           
           </div>
-        }>
-
-        </Route>
-     </Routes>
-    </Router>
     </div>
   
 
