@@ -53,7 +53,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
 
         <form onSubmit={HandleSubmit} className=' flex flex-col justify-center absolute  right-[10px] top-[-330px]  md:top-[-310px]   '>
 
-        <div className="bg-purple-950  mx-aduto  md:w-full   flex py-4 rounded-xl px-4 flex-col items-center ">
+        <div className="bg-purple-950  mx-aduto  md:w-full w-10/12  flex py-4 rounded-xl px-4 flex-col items-center ">
             <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 {isOpen && (
                     <div onClick={Close} className="flex border p-2 border-white rounded-lg cursor-pointer">
