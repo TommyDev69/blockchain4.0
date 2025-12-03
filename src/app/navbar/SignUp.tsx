@@ -49,7 +49,7 @@ interface ResultShow {
 
 const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid,  Close, isOpen}:ResultShow) => {
     return (  
-        <div className="relative ">
+        <div className="reladtive ">
 
         <form onSubmit={HandleSubmit} className=' flex flex-col justify-center absolfute  rigfht-[40px] tofp-[-330px]  md:tofp-[-310px]   '>
 
