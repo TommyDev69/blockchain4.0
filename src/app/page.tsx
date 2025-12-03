@@ -22,7 +22,7 @@ export default function Home() {
 
     <Router>
      <Routes>
-        <Route path="" element ={
+        <Route path="/home" element ={
 
           <div className="flex">
 

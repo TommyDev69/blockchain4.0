@@ -6,7 +6,7 @@ export default function NavContent() {
         <ul className='list-none flex justify-center w-full upperxcase capitalize'>
             <div className='py-4'>
 
-            <Link href='/'><li className='font-bold nav'>home</li></Link>
+            <Link href='/home'><li className='font-bold nav'>home</li></Link>
             <a href='#exchange'><li  className='nav'>Exchange</li></a>
             <a href='#wallet'><li  className='nav'>Wallet</li></a>
             <a href='#faq'><li  className='nav'>FAQ</li></a>
