@@ -49,9 +49,9 @@ interface ResultShow {
 
 const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid,  Close, isOpen}:ResultShow) => {
     return (  
-        <div className="relative w-full bg-red-600">
+        <div className="relative">
 
-        <form onSubmit={HandleSubmit} className='absolute right-[168px] top-[-330px]  md:top-[-310px]  w-full  '>
+        <form onSubmit={HandleSubmit} className='absolute right-1 top-[-330px] md:left-0 md:top-[-310px]  w-full wd-10/12 '>
 
         <div className="bg-purple-950  mx-auto  md:w-full w-full flex py-4rounded-xl px-4 flex-col items-center ">
             <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
@@ -68,7 +68,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
 
             <div className="flex space-x-1.5 w-full justify-center items-center">
                 <div className='w-[50%] py-8'>
-                    <button type="button" className='flex w-full space-x-0.5 justify-center items-center px-2  py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
+                    <button type="button" className='flex w-full space-x-0.5 justify-center items-center px-2  md: py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
                         <div className='text-[12px] text-[#ffffff]'>
                             <p className="capitalize">sign in</p>
                         </div>
@@ -95,7 +95,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
             <div className="flex">
                 {/* <div className="w-40 border-2 border[#ffff]"></div> */}
               <p className=" uppercase text-white my-2 ">
-            ________________________or________________________
+            _____________________________or_____________________________
 
           </p>
 
