@@ -32,7 +32,7 @@ interface SignInProps {
   isOpen: boolean;
 }
 
-export default function SignIn({
+export default function SignInExchange({
   HandleSignIn,
   HandleSubmit,
   InputForm,

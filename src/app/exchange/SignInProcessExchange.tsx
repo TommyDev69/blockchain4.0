@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Swal from "sweetalert2";
-import SignIn from './SignIn';
+// import SignIn from './SignInExchange';
+import SignInExchange from './SignInExchange';
 
 
 interface SignDetails {
@@ -19,7 +20,7 @@ interface PropsSigIn {
   Close: () => void;
   isOpen: boolean;
 }
-export default function SignInProcess({Close, isOpen}:PropsSigIn) {
+export default function SignInProcessExchange({Close, isOpen}:PropsSigIn) {
     const [error, setError] = useState<ErrorMsg>({});
 
 
@@ -135,7 +136,7 @@ export default function SignInProcess({Close, isOpen}:PropsSigIn) {
         className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 transition-opacity duration-500" onClick={Close}>
         <div onClick={(e) => e.stopPropagation()} className="w-full max-w-md">
 
-        <SignIn HandleSubmit={handleSubmit} Valid={valid}  HandleSignIn={handleInput}
+        <SignInExchange HandleSubmit={handleSubmit} Valid={valid}  HandleSignIn={handleInput}
           InputForm = {form} Error={error} Close={Close} isOpen={isOpen}
         />
 
