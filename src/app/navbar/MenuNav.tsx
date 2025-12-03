@@ -16,7 +16,7 @@ export default function MenuNav() {
     const openModalSigIn = () => setShowModalSigIn(true);
     const closeModalSigIn = () => setShowModalSigIn(false);
      return (
-
+        <>
         <div className='px-2 bg-[#040D26] h-screen' >
             <div className='pt-7 justify-centewr psx-6 md:pls-16  flex items-center'>
                 <Image src={Brand} alt="brandlogo" className='w-[70s%]' />
@@ -47,7 +47,12 @@ export default function MenuNav() {
 
                 </div>
 
-            {showModal && (
+           
+
+        
+        </div>
+
+         {showModal && (
                 <div className=" inset-0 bg-black/80 flex justify-center items-center z-50">
                 {/* <div className="absolute left-3"> */}
                     <SignUpProcess Close={closeModal} isOpen={showModal} />
@@ -63,8 +68,6 @@ export default function MenuNav() {
                 {/* </div> */}
                 </div>
             )}
-
-        
-        </div>
+        </>
     )
 }
