@@ -1,24 +1,35 @@
 'use client'
 
-import { useRouter } from "next/navigation";
+import Link from 'next/link';
 
 export default function NavRegister() {
-  const router = useRouter()
-
   return (
-    <div className='hidden md:flex gap-4 items-center justify-center w-[25%]'>
-        <div className="">
-                <button type="button" onClick={() => router.push('/SignUpProcess.tsx')}  className=" rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
-                    <p className="capitalize text-white  px-6  py-4 text-[8px] font-extrabold md:text-[10px]">sign up</p>
-                </button>
-            </div>
+    <div className="flex flex-col md:flex-row gap-4 items-center justify-center w-full md:w-[25%]">
+      
+      {/* Sign Up Button */}
+      <Link href="/navbar/SignUpProcess">
+        <button className="w-full md:w-auto rounded-lg border-2 border-purple-500
+          bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3
+          hover:scale-105 transition-transform duration-200"
+        >
+          <p className="text-white text-sm md:text-base font-extrabold uppercase text-center">
+            Sign Up
+          </p>
+        </button>
+      </Link>
 
-             <div className="">
-                <button type="button" onClick={() => router.push('/signInProcess')} className=" rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
-                    <p className="capitalize text-white px-6   py-4 text-[8px] md:text-[10px] font-extrabold">sign in</p>
-                </button>
-            </div>
+      {/* Sign In Button */}
+      <Link href="/navbar/SignInProcess">
+        <button className="w-full md:w-auto rounded-lg border-2 border-purple-500
+          bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3
+          hover:scale-105 transition-transform duration-200"
+        >
+          <p className="text-white text-sm md:text-base font-extrabold uppercase text-center">
+            Sign In
+          </p>
+        </button>
+      </Link>
 
     </div>
-  )
+  );
 }
