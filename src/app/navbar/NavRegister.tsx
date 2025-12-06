@@ -1,6 +1,5 @@
 'use client'
-// import React, { useState } from 'react'
-// import {}
+
 import { useRouter } from "next/navigation";
 
 export default function NavRegister() {
@@ -9,7 +8,7 @@ export default function NavRegister() {
   return (
     <div className='hidden md:flex gap-4 items-center justify-center w-[25%]'>
         <div className="">
-                <button type="button" onClick={() => router.push('/signUpProcess')}  className=" rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
+                <button type="button" onClick={() => router.push('/SignUpProcess.tsx')}  className=" rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
                     <p className="capitalize text-white  px-6  py-4 text-[8px] font-extrabold md:text-[10px]">sign up</p>
                 </button>
             </div>
