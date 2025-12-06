@@ -3,7 +3,7 @@ import NavRegister from './NavRegister'
 // import Link from 'next/link'
 export default function NavContent() {
   return (
-    <div className='w-[60%] hidden md:flex items-center justivfy-center justify-center'>
+    <div className='w-[60%] hidden md:flex items-center  justify-center'>
         <ul className='list-none flex justify-center w-full upperxcase capitalize'>
             <div className='py-4'>
 
@@ -13,8 +13,6 @@ export default function NavContent() {
             <a href='#faq'><li  className='nav'>FAQ</li></a>
             <a href='#contact'><li  className='nav'>Contact us</li></a>
             </div>
-            
-
         </ul>
         <NavRegister />
       
