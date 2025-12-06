@@ -1,4 +1,5 @@
 import React from 'react'
+import NavRegister from './NavRegister'
 // import Link from 'next/link'
 export default function NavContent() {
   return (
@@ -15,6 +16,7 @@ export default function NavContent() {
             
 
         </ul>
+        <NavRegister />
       
     </div>
   )

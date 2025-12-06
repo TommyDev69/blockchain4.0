@@ -11,7 +11,6 @@ const MainNav = () => {
         <div className="flex justify-between container items-center  py-8 mx-auto w-full">
             <BrandLog />
             <NavContent />
-            <NavRegister />
              <ToggleProcess />
         </div>
         </>
