@@ -1,20 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import Image from "next/image";
 import Brand from "../../../public/images/logo/logo.svg"
-import SignUpProcess from './SignUpProcess';
-import SignInProcess from './SignInProcess';
+import { useRouter } from "next/navigation";
 
 export default function MenuNav() {
-    //signUp
-    const [showModal, setShowModal] = useState(false);
-    const openModal = () => setShowModal(true);
-    const closeModal = () => setShowModal(false);
-
-  //signIn
-    const [showModalSigIn, setShowModalSigIn] = useState(false)
-    const openModalSigIn = () => setShowModalSigIn(true);
-    const closeModalSigIn = () => setShowModalSigIn(false);
+      const router = useRouter();
      return (
         <>
         <div className='px-2 bg-[#040D26] h-screen' >
@@ -34,13 +25,13 @@ export default function MenuNav() {
 
                 <div className=' flex-rows bg-ambewr-600 gap-4 items-center justify-center space-y-4 '>
                     <div className="max-w-full">
-                            <button type="button" onClick={openModal} className=" w-full rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
+                            <button type="button"onClick={() => router.push('/signUpProcess')}  className=" w-full rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
                                 <p className="capitalize text-white  px-6  py-4 text-[8px] font-extrabold md:text-[10px]">sign up</p>
                             </button>
                     </div>
 
                         <div className="max-w-full">
-                            <button type="button" onClick={openModalSigIn} className=" w-full rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
+                            <button type="button" className=" w-full rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
                                 <p className="capitalize text-white px-6   py-4 text-[8px] md:text-[10px] font-extrabold">sign in</p>
                             </button>
                         </div>
@@ -52,22 +43,8 @@ export default function MenuNav() {
         
         </div>
 
-         {showModal && (
-                <div className=" inset-0 bg-black/80 flex justify-center items-center z-50">
-                {/* <div className="absolute left-3"> */}
-                    <SignUpProcess Close={closeModal} isOpen={showModal} />
-                {/* </div> */}
-                </div>
-            )}
-
-            {showModalSigIn && (
-                <div className=" inset-0 bg-black/80 flex justify-center items-center z-50">
-                {/* <div className="absolute left-3"> */}
-                    <SignInProcess Close={closeModalSigIn} isOpen={showModalSigIn} />
-                    
-                {/* </div> */}
-                </div>
-            )}
+          
+           
         </>
     )
 }

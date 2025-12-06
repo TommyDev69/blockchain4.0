@@ -45,7 +45,7 @@ export default function Home() {
               </div>
 
               <Footer />
-              {/* <SignUpProcess /> */}
+             
 
             </div>
             <div className="hidden relative  w-[40%] bg-[#040D26]">

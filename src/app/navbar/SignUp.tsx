@@ -42,25 +42,23 @@ interface ResultShow {
         special: boolean;
     }
 
-    Close: () => void
-    isOpen: boolean
 }
 
 
-const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid,  Close, isOpen}:ResultShow) => {
+const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid}:ResultShow) => {
     return (  
         
-        <div className="relative ">
+        
 
-            <form onSubmit={HandleSubmit} className=' flex flex-col justify-center absolute md:right-[470px]  right-[45px] top-[-330px]  md:top-[-310px]   '>
+            <form onSubmit={HandleSubmit} className=' flex flex-col justify-center  '>
 
             <div className="bg-purple-950  mx-aduto  md:w-full w-10/12  flex py-4 rounded-xl px-4 flex-col items-center ">
                 <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
-                    {isOpen && (
-                        <div onClick={Close} className="flex border p-2 border-white rounded-lg cursor-pointer">
-                        <Image src={close} alt="Close modal" width={12} height={12} />
-                        </div>
-                    )}
+                
+                    <div className="flex border p-2 border-white rounded-lg cursor-pointer">
+                    <Image src={close} alt="Close modal" width={12} height={12} />
+                    </div>
+                    
                 </div>
 
                 <div className="flex w-full justify-center items-center">
@@ -208,7 +206,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                 </div>
             </div>
             </form>
-        </div>
+        
     );
 }
  

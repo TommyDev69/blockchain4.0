@@ -28,34 +28,20 @@ interface SignInProps {
     number: boolean;
     special: boolean;
   };
-  Close: () => void;
-  isOpen: boolean;
 }
 
-export default function SignIn({
-  HandleSignIn,
-  HandleSubmit,
-  InputForm,
-  Error,
-  Valid,
-  Close,
-  isOpen
-}: SignInProps) {
+export default function SignIn({HandleSignIn,HandleSubmit,InputForm,Error,Valid,}: SignInProps) {
 
   return (
-    <div className='relative'>
-      <form
-        onSubmit={HandleSubmit}
-        className="absolute right-[25px] top-[-220px] "
-      >
+    // <div className='relative'>
+      <form onSubmit={HandleSubmit}>
         <div className="bg-purple-950 mwx-auto flex py-4 md:w-full  rounded-xl px-4 flex-col items-center">
           
           <div className="flex w-full justify-end pr-2">
-            {isOpen && (
-              <div onClick={Close} className="flex border p-2 border-white rounded-lg cursor-pointer">
-                <Image src={close} alt="Close modal" width={12} height={12} />
-              </div>
-            )}
+            <div  className="flex border p-2 border-white rounded-lg cursor-pointer">
+              <Image src={close} alt="Close modal" width={12} height={12} />
+            </div>
+          
           </div>
 
           <div className="flex w-full justify-center items-center">
@@ -136,6 +122,6 @@ export default function SignIn({
           </div>
         </div>
       </form>
-    </div>
+    // </div>
   );
 }

@@ -29,16 +29,11 @@ interface ErrorType {
   password?: string;
 }
 
-interface Props {
-  Close: () => void;
-  isOpen: boolean;
-}
-
 
 
 const Url = "https://countriesnow.space/api/v0.1/countries";
 
-const SignUpProcess = ({Close, isOpen}:Props) => {
+const SignUpProcess = () => {
   const [error, setError] = useState<ErrorType>({});
   const [countryApi, setCountryApi] = useState<CountryType[]>([]);
   const [city, setCity] = useState<string[]>([]);
@@ -247,13 +242,13 @@ const SignUpProcess = ({Close, isOpen}:Props) => {
 
 //  if (!isOpen) return null; // Don't render if modal is closed
 // Don't render if modal is closed
-  if (!isOpen) return null;
+  // if (!isOpen) return null;
   return (  
   <div
-    className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 transition-opacity duration-500"
-    onClick={Close} // clicking the backdrop closes modal
+    className=""
+    // clicking the backdrop closes modal
   >
-    <div onClick={(e) => e.stopPropagation()} className="w-full ">
+    <div  className="w-full ">
       <SignUp
         HandleForm={handleForm}
         HandleSubmit={handleSubmit}
@@ -262,8 +257,7 @@ const SignUpProcess = ({Close, isOpen}:Props) => {
         Country={countryApi}
         City={city}
         Valid={valid}
-        Close={Close}
-        isOpen={isOpen}
+        
       />
     </div>
   </div>
