@@ -98,7 +98,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                         <p className=" uppercase text-white font-bold my-2">or</p>
                     </div>
 
-                    <div className="min-w-[430px] bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
+                    <div className="md:min-w-[430px] bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
 
                 </div>
 
