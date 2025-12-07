@@ -2,7 +2,6 @@
 import BrandLog from "./BrandLog";
 // import MenuNav from "./MenuNav";
 import NavContent from "./NavContent";
-import NavRegister from "./NavRegister";
 import ToggleProcess from "./ToggleProcess";
 
 const MainNav = () => {

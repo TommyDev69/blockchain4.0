@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import SignUp from "./SignUp";
+// import SignUp from "./SignUp";
 
 interface CountryType {
   country: string;
@@ -33,7 +34,7 @@ interface ErrorType {
 
 const Url = "https://countriesnow.space/api/v0.1/countries";
 
-const SignUpProcess = () => {
+const Page = () => {
   const [error, setError] = useState<ErrorType>({});
   const [countryApi, setCountryApi] = useState<CountryType[]>([]);
   const [city, setCity] = useState<string[]>([]);
@@ -259,6 +260,7 @@ const SignUpProcess = () => {
         Valid={valid}
         
       />
+      
     </div>
   </div>
 
@@ -269,4 +271,4 @@ const SignUpProcess = () => {
   );
 };
 
-export default SignUpProcess;
+export default Page;

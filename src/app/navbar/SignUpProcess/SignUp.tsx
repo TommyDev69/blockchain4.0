@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import close from '../../../public/images/closed.svg'
-import Brand from "../../../public/images/logo/logo.svg"
-import google from "../../../public/google (2).png"
+import close from '../../../../public/images/closed.svg'
+import Brand from "../../../../public/images/logo/logo.svg"
+import google from "../../../../public/google (2).png"
 
 interface CountryType {
   country: string;
@@ -50,9 +50,9 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
         
         
 
-            <form onSubmit={HandleSubmit} className=' flex flex-col justify-center  '>
+            <form onSubmit={HandleSubmit} className=' flex flex-col justify-center pcy-10  '>
 
-            <div className="bg-purple-950  mx-aduto  md:w-full w-10/12  flex py-4 rounded-xl px-4 flex-col items-center ">
+            <div className="bg-purple-950  mx-auto  md:w-8/12 w-6/12  flex py-4 rounded-xl px-4 flex-col items-center ">
                 <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 
                     <div className="flex border p-2 border-white rounded-lg cursor-pointer">
@@ -92,13 +92,14 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                 </div>
 
                 <div className="flex">
-                    {/* <div className="w-40 border-2 border[#ffff]"></div> */}
-                <p className=" uppercase text-white my-2 ">
-                ________________________or________________________
+                    <div className="min-w-[430px] bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
+                    
+                    <div>
+                        <p className=" uppercase text-white font-bold my-2">or</p>
+                    </div>
 
-            </p>
+                    <div className="min-w-[430px] bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
 
-                    {/* <div className="w-40 border-2 border[#ffff]"></div> */}
                 </div>
 
                 <div className='w-full'>

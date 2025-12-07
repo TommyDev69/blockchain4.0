@@ -1,4 +1,4 @@
-import Fund from "./exchange/Fund";
+
 import MainExchange from "./exchange/MainExchange";
 import FaqPage from "./faq/FaqPage";
 import Footer from "./footer/Footer";
