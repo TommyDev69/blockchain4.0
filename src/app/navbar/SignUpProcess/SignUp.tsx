@@ -129,10 +129,10 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                     </div>
 
                     <div className='w-full py-2'>
-                        <select name='gender'  value={FormData.gender } onChange={HandleForm}  className='font-bold  bg-fuchsia-950  text-[#ffffff] pl-2 tedxt-[#000000] border-2 w-full rounded-lg py-2 text-[10px] border-[#ffff]'>
-                            <option value="">Choose your Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
+                        <select name='gender'  value={FormData.gender } onChange={HandleForm}  className='font-bold    text-[#ffffff] pl-2 tedxt-[#000000] border-2 w-full rounded-lg py-2 text-[10px] border-[#ffff]'>
+                            <option value="" className='text-[#000000]'>Choose your Gender</option>
+                            <option value="Male" className='text-[#000000]'>Male</option>
+                            <option value="Female" className='text-[#000000]'>Female</option>
 
                         </select>
                         {Error.gender &&(
@@ -144,7 +144,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
 
                     <div className='flex gap-2 w-full py-2'>
                         <div className='w-full'>
-                            <select name="country" value={FormData.country } onChange={HandleForm}  className='font-bold  bg-fduchsia-950  text-[#ffffff] pl-2 tedxt-[#000000] border-2 w-full rounded-lg py-2 text-[10px] border-[#ffff]'>
+                            <select name="country" value={FormData.country } onChange={HandleForm}  className='font-bold  bg-fduchsia-950  text-[#ffffff] pl-2  border-2 w-full rounded-lg py-2 text-[10px] border-[#ffff]'>
                                 <option value="">Choose your Country</option>
                                 {
                                     Country.map((item, index) => (
