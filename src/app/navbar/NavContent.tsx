@@ -3,9 +3,9 @@ import NavRegister from './NavRegister'
 // import Link from 'next/link'
 export default function NavContent() {
   return (
-    <div className='w-[65%] hidden md:flex items-center  justify-center'>
+    <div className='w-full bg-amber-400 hidden md:flex items-center   justify-center'>
         <ul className='list-none flex justify-center w-full upperxcase capitalize'>
-            <div className='py-4'>
+            <div className='py-4 md::mr-10 lg:mr-0 '>
 
             <a href='#home'><li className='font-bold nav'>home</li></a>
             <a href='#exchange'><li  className='nav'>Exchange</li></a>
