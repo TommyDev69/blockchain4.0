@@ -42,6 +42,8 @@ interface ResultShow {
         special: boolean;
     }
 
+    Close:() =>void
+
 }
 
 
@@ -92,13 +94,13 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                 </div>
 
                 <div className="flex">
-                    <div className="md:min-w-[430px]  w-8/12 bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
+                    <div className="lg:min-w-[430px]  w-8/12 bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
                     
                     <div>
                         <p className=" uppercase text-white font-bold my-2">or</p>
                     </div>
 
-                    <div className="md:min-w-[430px] w-8/12 bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
+                    <div className="lg:min-w-[430px] w-8/12 bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
 
                 </div>
 
