@@ -47,7 +47,7 @@ interface ResultShow {
 }
 
 
-const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid}:ResultShow) => {
+const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid, Close}:ResultShow) => {
     return (  
         
         
@@ -58,7 +58,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                 <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 
                     <div className="flex border p-2 border-white rounded-lg cursor-pointer">
-                    <Image src={close} alt="Close modal" width={12} height={12} />
+                    <Image src={close} onClick={Close} alt="Close modal" width={12} height={12} />
                     </div>
                     
                 </div>
@@ -94,13 +94,13 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                 </div>
 
                 <div className="flex">
-                    <div className="lg:min-w-[430px]  w-8/12 bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
+                    <div className=" border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
                     
                     <div>
                         <p className=" uppercase text-white font-bold my-2">or</p>
                     </div>
 
-                    <div className="lg:min-w-[430px] w-8/12 bordser-2 border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
+                    <div className=" border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
 
                 </div>
 
