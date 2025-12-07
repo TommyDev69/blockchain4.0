@@ -34,6 +34,8 @@ const Url = "https://countriesnow.space/api/v0.1/countries";
 
 const Page = () => {
 
+    // const [isOpen, setIsOpen] = useState(false)
+
     const [error, setError] = useState<ErrorType>({});
       const [countryApi, setCountryApi] = useState<CountryType[]>([]);
       const [city, setCity] = useState<string[]>([]);
@@ -233,27 +235,27 @@ const Page = () => {
           });
         
           console.log("Form submitted:", form);
-      }
+        }
+        // if (!isOpen) return null;
     return (
-         <div
-    className=""
-    // clicking the backdrop closes modal
-  >
-    <div  className="w-full ">
-     <SignUp
-        HandleForm={handleForm}
-        HandleSubmit={handleSubmit}
-        FormData={form}
-        Error={error}
-        Country={countryApi}
-        City={city}
-        Valid={valid}
+        <div>
+            <div  className="w-full ">
+              
+                <SignUp
+                    HandleForm={handleForm}
+                    HandleSubmit={handleSubmit}
+                    FormData={form}
+                    Error={error}
+                    Country={countryApi}
+                    City={city}
+                    Valid={valid}
+                   
+                    
+                />
         
-      />
-      
-    </div>
-  </div>
-      );
+            </div>
+        </div>
+     );
 }
  
 export default Page;

@@ -2,6 +2,9 @@ import Image from 'next/image';
 import close from '../../../../public/images/closed.svg'
 import Brand from "../../../../public/images/logo/logo.svg"
 import google from "../../../../public/google (2).png"
+import { useRouter } from 'next/navigation';
+
+
 
 interface CountryType {
   country: string;
@@ -41,13 +44,13 @@ interface ResultShow {
         number: boolean;
         special: boolean;
     }
-
-    Close:() =>void
+   
 
 }
 
 
-const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid, Close}:ResultShow) => {
+const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid}:ResultShow) => {
+   const router = useRouter()
     return (  
         
         
@@ -58,7 +61,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                 <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 
                     <div className="flex border p-2 border-white rounded-lg cursor-pointer">
-                    <Image src={close} onClick={Close} alt="Close modal" width={12} height={12} />
+                    <Image src={close} onClick={() => router.push('/')} alt="Close" width={12} height={12} />
                     </div>
                     
                 </div>
@@ -93,15 +96,8 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                     </div>
                 </div>
 
-                <div className="flex">
-                    <div className=" border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
-                    
-                    <div>
-                        <p className=" uppercase text-white font-bold my-2">or</p>
-                    </div>
-
-                    <div className=" border-[#ffffff] mt-8"> <hr className='border-0.5 border-[#ffffff]' /></div>
-
+                <div className="flex justify-center">
+                    <p className=" uppercase text-white text-[24px] font-bold my-2">or</p>
                 </div>
 
                 <div className='w-full'>
