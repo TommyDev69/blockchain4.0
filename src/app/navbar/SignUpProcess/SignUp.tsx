@@ -52,7 +52,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
 
             <form onSubmit={HandleSubmit} className=' flex flex-col justify-center pcy-10  '>
 
-            <div className="bg-purple-950  mx-auto  md:w-8/12 w-6/12  flex py-4 rounded-xl px-4 flex-col items-center ">
+            <div className="bg-purple-950  mx-auto  md:w-8/12 w-full  flex py-4 rounded-xl px-4 flex-col items-center ">
                 <div className="flex w-full bg-blend-color-dodge justify-end pr-2 pt-4">
                 
                     <div className="flex border p-2 border-white rounded-lg cursor-pointer">
@@ -69,7 +69,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                     <div className='w-[50%] py-8'>
                         <button type="button" className='flex w-full space-x-0.5 justify-center items-center px-2  py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
                             <div className='text-[12px] text-[#ffffff]'>
-                                <p className="capitalize">sign in</p>
+                                <p className="capitalize">sign up</p>
                             </div>
 
                             <div>
@@ -81,7 +81,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                     <div className='w-[50%]'>
                         <button type="button" className='flex space-x-0.5 w-full justify-center px-2 items-center py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
                             <div className='text-[12px] text-[#ffffff]'>
-                                <p className="capitalize">sign in</p>
+                                <p className="capitalize">git up</p>
                             </div>
 
                             <div>

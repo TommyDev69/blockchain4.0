@@ -25,23 +25,23 @@ interface CoinType {
   market_cap: number;
 }
 
-interface TableRender {
-  market_cap_rank: number;
-  name: string;
-  image: string;
-  price: string;
-  price_change_percentage_24h: number | null;
-  market_cap: string;
-  action: string;
-  numb: number;
-}
+// interface TableRender {
+//   market_cap_rank: number;
+//   name: string;
+//   image: string;
+//   price: string;
+//   price_change_percentage_24h: number | null;
+//   market_cap: string;
+//   action: string;
+//   numb: number;
+// }
 
-interface FeatureType {
-  id: number;
-  image: string;
-  topic: string;
-  content: string;
-}
+// interface FeatureType {
+//   id: number;
+//   image: string;
+//   topic: string;
+//   content: string;
+// }
 
 
 // import axios from 'axios'
