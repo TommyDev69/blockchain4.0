@@ -56,7 +56,7 @@ export default function SignIn({HandleSignIn,HandleSubmit,InputForm,Error,Valid,
           {/* SOCIAL BUTTONS */}
           <div className="flex space-x-1.5 w-full justify-center items-center">
             <div className='w-[50%] py-8'>
-              <button type="button"  className='flex w-full space-x-0.5 justify-center items-center px-2  md: py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
+              <button type="button" onClick={() => signIn("google")} className='flex w-full space-x-0.5 justify-center items-center px-2  md: py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
                 <span className='text-[12px] text-white capitalize'>sign in</span>
                 <Image src={google} alt="Google login" width={40} height={40} />
               </button>

@@ -3,9 +3,9 @@ import close from '../../../../public/images/closed.svg'
 import Brand from "../../../../public/images/logo/logo.svg"
 import google from "../../../../public/google (2).png"
 import github from "../../../../public/Github.png"
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
+import { useRouter } from 'next/navigation';
+import { signIn } from "next-auth/react";
 
 
 interface CountryType {
@@ -74,8 +74,8 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
 
                 <div className="flex space-x-1.5 w-full justify-center items-center">
                     <div className='w-[50%] py-8'>
-                       <Link href='https://gmail.com'> 
-                        <button type="button" className='flex w-full space-x-0.5 justify-center items-center px-2  py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
+                       
+                        <button type="button" onClick={() => signIn("google")} className='flex w-full space-x-0.5 justify-center items-center px-2  py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
                             <div className='text-[12px] text-[#ffffff]'>
                                 <p className="capitalize">sign up</p>
                             </div>
@@ -84,21 +84,21 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                                 <Image src={google} alt="close" width={40} height={40} />
                             </div>
                         </button>
-                        </Link>
+                       
                     </div>
 
                     <div className='w-[50%]'>
-                       <Link href='https://github.com/login'> 
-                            <button type="button" className='flex space-x-0.5 w-full justify-center px-2 items-center py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
-                                <div className='text-[12px] text-[#ffffff]'>
-                                    <p className="capitalize">git up</p>
-                                </div>
+                      
+                        <button type="button"  onClick={() => signIn("github")} className='flex space-x-0.5 w-full justify-center px-2 items-center py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
+                            <div className='text-[12px] text-[#ffffff]'>
+                                <p className="capitalize">git up</p>
+                            </div>
 
-                                <div>
-                                    <Image src={github} alt="close" width={40} height={40} />
-                                </div>
-                            </button>
-                        </Link>
+                            <div>
+                                <Image src={github} alt="close" width={40} height={40} />
+                            </div>
+                        </button>
+                        
                     </div>
                 </div>
 
