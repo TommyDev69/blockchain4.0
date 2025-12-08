@@ -2,11 +2,10 @@
 // import React, { useState } from 'react'
 import Image from "next/image";
 import Brand from "../../../public/images/logo/logo.svg"
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function MenuNav() {
-      const router = useRouter();
+    
      return (
         <>
         <div className='px-2 bg-[#040D26] h-screen' >
@@ -27,7 +26,7 @@ export default function MenuNav() {
                 <div className=' flex-rows bg-ambewr-600 gap-4 items-center justify-center space-y-4 '>
                     <div className="max-w-full">
                             <Link href="/navbar/SignUpProcess">
-                                <button type="button"onClick={() => router.push('./navbar/signUpProcess')}  className=" w-full rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
+                                <button type="button"   className=" w-full rounded-lg borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
                                     <p className="capitalize text-white  px-6  py-4 text-[8px] font-extrabold md:text-[10px]">sign up</p>
                                 </button>
                             </Link>
