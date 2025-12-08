@@ -21,7 +21,7 @@ export default function FooterContact({Contact,title}:File) {
     
             {Contact.map(data =>(
                 <div className="flex flex-row items-center py-4 text-[#ccc]" key={data.id}>
-                    <div className="flex space-x-2 text-[12px]">
+                    <div className="flex space-x-2 md:text-[12px] text-[8px]">
                         <Image src={data.image} alt='image' />
                        
                         {data.navigate ?(
