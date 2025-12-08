@@ -2,6 +2,7 @@ import Image from 'next/image';
 import close from '../../../../public/images/closed.svg'
 import Brand from "../../../../public/images/logo/logo.svg"
 import google from "../../../../public/google (2).png"
+import github from "../../../../public/Github.png"
 import { useRouter } from 'next/navigation';
 
 
@@ -90,7 +91,7 @@ const SignUp = ({HandleForm, HandleSubmit, FormData, Error, Country, City, Valid
                             </div>
 
                             <div>
-                                <Image src={google} alt="close" width={40} height={40} />
+                                <Image src={github} alt="close" width={40} height={40} />
                             </div>
                         </button>
                     </div>

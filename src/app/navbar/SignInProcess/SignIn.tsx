@@ -3,6 +3,7 @@ import Image from 'next/image';
 import close from '../../../../public/images/closed.svg';
 import Brand from "../../../../public/images/logo/logo.svg";
 import google from "../../../../public/google (2).png";
+import github from '../../../../public/Github.png'
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -37,7 +38,7 @@ export default function SignIn({HandleSignIn,HandleSubmit,InputForm,Error,Valid,
   return (
     // <div className='relative'>
       <form onSubmit={HandleSubmit}>
-        <div className="bg-purple-950 mwx-auto flex py-4 md:w-full  rounded-xl px-4 flex-col items-center">
+        <div className="bg-purple-950 mwx-auto flex py-4 md:w-8/12 w-full rounded-xl px-4 flex-col items-center">
           
           <div className="flex w-full justify-end pr-2">
             <div  className="flex border p-2 border-white rounded-lg cursor-pointer">
@@ -61,19 +62,20 @@ export default function SignIn({HandleSignIn,HandleSubmit,InputForm,Error,Valid,
 
             <div className='w-[50%] py-8'>
               <button type="button" className='flex w-full space-x-0.5 justify-center items-center px-2  md: py-4 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(15deg,rgba(189,36,223,0.7),rgba(45,106,222,0.7)_107.15%)] rounded-lg'>
-                <span className='text-[12px] text-white capitalize'>sign in</span>
-                <Image src={google} alt="Google login" width={40} height={40} />
+                <span className='text-[12px] text-white capitalize'>github</span>
+                <Image src={github} alt="github login" width={40} height={40} />
               </button>
             </div>
           </div>
 
+
           {/* Divider */}
-          <p className=" uppercase text-white my-2 ">
-            _____________________________or_____________________________
-
-          </p>
-
+         <div className="flex justify-center">
+            <p className=" uppercase text-white text-[24px] font-bold my-2">or</p>
+          </div>
           {/* EMAIL FIELD */}
+
+
           <div className='w-full py-2'>
             <input
               type="email"
