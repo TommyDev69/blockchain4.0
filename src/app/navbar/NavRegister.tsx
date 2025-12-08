@@ -11,7 +11,7 @@ export default function NavRegister() {
     
 
   const handleClick = () => {
-    router.push("/navbar/SignUpProcess") // Navigate to a page
+    router.push("/navbar/SignInProcess") // Navigate to a page
     console.log('/navbar/SignInProcess')
   }
 

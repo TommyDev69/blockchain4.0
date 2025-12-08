@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Swal from "sweetalert2";
-import SignIn from './SignIn';
+import SignIn from './SignInss';
 
 
 interface SignDetails {
@@ -14,7 +14,7 @@ interface ErrorMsg {
   email?: string;
   password?: string;
 }
-export default function SignInProcess() {
+export default function SignInProcesss() {
     const [error, setError] = useState<ErrorMsg>({});
 
 
