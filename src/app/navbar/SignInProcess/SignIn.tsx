@@ -38,7 +38,7 @@ export default function SignIn({HandleSignIn,HandleSubmit,InputForm,Error,Valid,
   return (
     // <div className='relative'>
       <form onSubmit={HandleSubmit}>
-        <div className="bg-purple-950 mwx-auto flex py-4 md:w-8/12 w-full rounded-xl px-4 flex-col items-center">
+        <div className="bg-purple-950 mx-auto flex py-4 md:w-8/12 w-full rounded-xl px-4 flex-col items-center">
           
           <div className="flex w-full justify-end pr-2">
             <div  className="flex border p-2 border-white rounded-lg cursor-pointer">
