@@ -20,7 +20,7 @@ export default function NavRegister() {
                 </button></Link>
         </div>
              <div className="">
-                <Link href="/navbar/SignUpProcess"><button type="button"  className=" rounded-lg w-24 borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
+                <Link href="/navbar/SignInProcess"><button type="button"  className=" rounded-lg w-24 borwder-2 border-[rgba(189, 36, 223, 10)] bg-[linear-gradient(90deg,rgba(189,36,223,0.9),rgba(45,106,222,0.9)_97.15%)] ;">
                     <p className="capitalize text-white px-4   py-4 text-[8px] lg:text-[10px] font-extrabold">sign in</p>
                 </button></Link>
             </div>
